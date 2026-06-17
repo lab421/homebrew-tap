@@ -1,14 +1,22 @@
 cask "forel" do
   arch arm: "arm64", intel: "x86_64"
 
-  version "0.1.0-alpha.8"
-  sha256 arm:   "00d2f0dd9145d00aa20ec72ffde99af3a8bd518f5fdb86e87d4d8ee735c8a8c5",
-         intel: "ac0848c9cab9ede609df8f65e7829570a656959fbba3e81520318ae3d69e851e"
+  version "0.1.0-beta.2"
+  sha256 arm:   "3838d340a7dca2408d25d57e785e511727fe08416e6371f3f7fd8f7cd884e304",
+         intel: "c3ac0666112367bb84b1549eb4935c327e8a9a431f06cc6dba1b569658a32beb"
 
-  url "https://github.com/forel-app/forel/releases/download/v0.1.0-alpha.8/Forel-v0.1.0-alpha.8-darwin-#{arch}.dmg"
+  url "https://github.com/forel-app/forel/releases/download/v#{version}/Forel-v#{version}-darwin-#{arch}.dmg"
   name "Forel"
-  desc "macOS file-automation app that watches folders and runs rules"
+  desc "File-automation app that watches folders and runs rules"
   homepage "https://github.com/forel-app/forel"
+
+  livecheck do
+    url :url
+    strategy :github_latest
+    regex(/^v?(\d+\.\d+\.\d+(?:-(?:alpha|beta|rc)\.\d+)?)$/i)
+  end
+
+  depends_on macos: :sonoma
 
   app "Forel.app"
 
