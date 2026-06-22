@@ -1,12 +1,12 @@
 # homebrew-forel
 
-Official Homebrew tap for [Forel](https://github.com/forel-app/forel), a free and open-source
+Official Homebrew tap for [Forel](https://github.com/lab421/forel), a free and open-source
 file automation app for macOS (the Hazel alternative).
 
 ## Install
 
 ```sh
-brew install --cask forel-app/tap/forel
+brew install --cask lab421/tap/forel
 ```
 
 or:
@@ -18,6 +18,6 @@ brew install forel
 
 ## Updating
 
-This tap is updated automatically by the [release workflow](https://github.com/forel-app/forel/blob/main/.github/workflows/release.yml)
+This tap is updated automatically by the [release workflow](https://github.com/lab421/forel/blob/main/.github/workflows/release.yml)
 in the main `forel` repo whenever a new version is tagged and released. `Casks/forel.rb`
 should not normally be edited by hand.
