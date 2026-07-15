@@ -1,9 +1,9 @@
 cask "forel" do
   arch arm: "arm64", intel: "x86_64"
 
-  version "1.0.5"
-  sha256 arm:   "d560d726e8bdd9061f2e10008ccf7dcc42b0c2e95b5f8e78d2ac91b4e8742e21",
-         intel: "62c41c610490ae5a93741466dd28581d790dd2cb04ba34b439e0f8b55cb30aac"
+  version "1.0.6"
+  sha256 arm:   "3ab5135cb621a0d6b58a47a667df98a93c47bb090f5241d36223f8a7a54b3203",
+         intel: "54969df046f20d1c03c0c2113046625c5431a29a0f51f272b32702e77eea055d"
 
   url "https://github.com/lab421/forel/releases/download/v#{version}/Forel-v#{version}-darwin-#{arch}.dmg"
   name "Forel"
@@ -16,7 +16,7 @@ cask "forel" do
     regex(/^v?(\d+\.\d+\.\d+(?:-(?:alpha|beta|rc)\.\d+)?)$/i)
   end
 
-  depends_on macos: :sonoma
+  depends_on macos: :ventura
 
   app "Forel.app"
 
