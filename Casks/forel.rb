@@ -1,11 +1,8 @@
 cask "forel" do
-  arch arm: "arm64", intel: "x86_64"
+  version "1.0.7"
+  sha256 "38872b17c0a729bdaac310a7036ecba0f9efc01788d54f11ce8b1456b6925ca9"
 
-  version "1.0.6"
-  sha256 arm:   "3ab5135cb621a0d6b58a47a667df98a93c47bb090f5241d36223f8a7a54b3203",
-         intel: "54969df046f20d1c03c0c2113046625c5431a29a0f51f272b32702e77eea055d"
-
-  url "https://github.com/lab421/forel/releases/download/v#{version}/Forel-v#{version}-darwin-#{arch}.dmg"
+  url "https://github.com/lab421/forel/releases/download/v#{version}/Forel-v#{version}.dmg"
   name "Forel"
   desc "File-automation app that watches folders and runs rules"
   homepage "https://github.com/lab421/forel"
